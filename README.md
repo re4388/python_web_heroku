@@ -1,24 +1,23 @@
-## usage
-1. edit code
+# A Simple Flask Web app deploy to Heroku
+
+## Goal
+The simplest case to deploy a flask Web app on Heroku
+
+## Workflow
+1. work on code
 2. push to github
-3. since github is connected to Heroku, go to Heroku
+3. Let Heroku connects to Github repo in Heroku setting
 4. Manual deploy at Heroku
-5. it shall work
+5. Check building and log
+6. open app to see the result
    
 
-## Note
+## Side Note
 1. you need to have requirement.txt, Procfile and runtime.exe setting as here
-2. go to Heroku to deploy and see log if any debug needed
-3. if use negok `ngrok http 5002`
-
-## webhook setting
-1. Heroku: 
-   https://python-line-bot-20191217.herokuapp.com/callback
-2. ngrok
-   `ngrok http 5002` and check what thr port forward
+3. Alao can use negok to locally test, go ngrok to know more. `ngrok http 5002`
 
 
-## if need to manual deploy to heroku
+## Heroku
 https://dashboard.heroku.com/apps/python-line-bot-20191217/deploy/github
 
 
