@@ -1,16 +1,17 @@
 from flask import Flask, request, abort
-import configparser
+import os 
+from boto.s3.connection import S3Connection
+
 
 
 app = Flask(__name__)
 
-config = configparser.ConfigParser()
-config.read("config.ini")
-print(config['config']['Access_Token'])
+
+
 
 @app.route("/")
 def hello():
-    return config['config']['Access_Token']
+    return S3Connection(os.environ['Access_Token'])
 
 
 
