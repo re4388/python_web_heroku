@@ -6,12 +6,12 @@ from boto.s3.connection import S3Connection
 
 app = Flask(__name__)
 
-
+var1 = S3Connection(os.environ['Access_Token'])
 
 
 @app.route("/")
 def hello():
-    return S3Connection(os.environ['Access_Token'])
+    return ('hello', var1)
 
 
 
